@@ -1,0 +1,91 @@
+.saas-app {
+  --ink: #f0ebe1;
+  --muted: #a39c90;
+  --line: #302d27;
+  --surface: #131311;
+  --canvas: #0b0b0a;
+  --green: #c29b5d;
+  --lime: #dfbd7e;
+  color-scheme: dark;
+  background: var(--canvas);
+  color: var(--ink);
+}
+.saas-app .sidebar { border-right: 1px solid #27241e; background: #0e0e0d; }
+.saas-app .brand-symbol { background: #c69e5e; color: #17130c; }
+.saas-app .workspace-switcher { border-color: #38332a; background: #171613; }
+.saas-app .shop-avatar { background: #2d2518; color: #e1bd7b; }
+.saas-app .nav-caption, .saas-app .workspace-copy small, .saas-app .profile-mini small { color: #91897a; }
+.saas-app .sidebar-link { color: #bcb4a6; }
+.saas-app .sidebar-link:hover { background: #211d15; color: #f3ead7; }
+.saas-app .sidebar-link.active { background: #2c2416; color: #e2c17e; }
+.saas-app .nav-count { background: #3a3020; color: #dfc788; }
+.saas-app .sidebar-ai-card { border-color: #51432c; background: #19160f; }
+.saas-app .ai-card-icon { background: #2d2518; color: #dfbd7e; }
+.saas-app .sidebar-ai-card p { color: #aaa294; }
+.saas-app .sidebar-ai-card > button { color: #dfbd7e; }
+.saas-app .profile-mini { border-color: #302d27; }
+.saas-app .profile-avatar, .saas-app .top-avatar { background: #302719; color: #e0bd7b; }
+.saas-app .saas-topbar { border-bottom-color: #302d27; background: #10100f; color: #eee8dd; }
+.saas-app .breadcrumb, .saas-app .breadcrumb strong { color: #c3bbad; }
+.saas-app .breadcrumb svg { color: #736c5f; }
+.saas-app .global-search, .saas-app .icon-button { border-color: #39362f; background: #151513; color: #c5bcac; }
+.saas-app .global-search input { color: #ece6db; }
+.saas-app .global-search input::placeholder { color: #807a70; }
+.saas-app .global-search kbd { border-color: #39362f; color: #a69e91; }
+.saas-app .notification-dot { border-color: #151513; background: #d6aa65; }
+.saas-app .dashboard-content { color: #eee8dd; }
+.saas-app .date-eyebrow, .saas-app .page-heading p { color: #a59d90; }
+.saas-app .live-dot, .saas-app .open-status > span, .saas-app .team-online > span { background: #c7a362; }
+.saas-app .page-heading h1, .saas-app .panel-heading h2 { color: #f0ebe1; }
+.saas-app .page-heading h1 span, .saas-app .section-kicker { color: #c6a15f; }
+.saas-app .primary-button { border-color: #d2ad6a; background: linear-gradient(180deg, #dfbd7e, #bb9150); color: #19140d !important; }
+.saas-app .primary-button:hover { background: #e6c987; }
+.saas-app .metric-card, .saas-app .panel { border-color: #302d27; background: #131311; }
+.saas-app .metric-top, .saas-app .metric-note { color: #a7a094; }
+.saas-app .metric-value, .saas-app .revenue-total > strong { color: #f0ebe1; }
+.saas-app .metric-icon.green, .saas-app .metric-icon.blue, .saas-app .metric-icon.orange, .saas-app .metric-icon.violet { background: #272014; color: #ddba76; }
+.saas-app .metric-change.up, .saas-app .metric-change.down { color: #d0ad69; }
+.saas-app .subtle-button, .saas-app .select-button { border-color: #39362f; background: #171715; color: #d2c7b4; }
+.saas-app .subtle-button:hover, .saas-app .select-button:hover { border-color: #80683e; color: #e5c37f; }
+.saas-app .agenda-summary, .saas-app .appointment-row, .saas-app .popular-service, .saas-app .team-status { border-color: #302d27; }
+.saas-app .today-date strong, .saas-app .appointment-detail > strong, .saas-app .popular-service-name strong, .saas-app .team-person strong { color: #e9e3d8; }
+.saas-app .calendar-icon, .saas-app .person-avatar.mint, .saas-app .service-number.mint { background: #292216; color: #e0bd7b; }
+.saas-app .person-avatar.peach, .saas-app .service-number.peach { background: #2d2119; color: #d5a17a; }
+.saas-app .person-avatar.lavender, .saas-app .service-number.lavender { background: #29251d; color: #d0bb8e; }
+.saas-app .person-avatar.yellow, .saas-app .service-number.yellow { background: #302817; color: #dec27c; }
+.saas-app .appointment-detail > span, .saas-app .team-person small { color: #a39b8e; }
+.saas-app .appointment-status { background: #2b2417; color: #dfbd7e; }
+.saas-app .appointment-status.em-atendimento { background: #22231f; color: #d5bd87; }
+.saas-app .appointment-status.concluído { background: #242519; color: #c9c37f; }
+.saas-app .appointment-status.aguardando { background: #30271a; color: #d3ac6b; }
+.saas-app .row-action:hover { background: #2b2417; color: #e3c581; }
+.saas-app .add-appointment-row { border-color: #39362f; color: #d4b16b; }
+.saas-app .revenue-total > span { color: #dfbd7e; }
+.saas-app .chart-guides i { border-color: #302d27; }
+.saas-app .chart-bars span { background: #705933; }
+.saas-app .chart-bars span.bar-highlight { background: #d2ab65; }
+.saas-app .chart-labels, .saas-app .service-progress { color: #918a7d; }
+.saas-app .service-progress { background: #302d27; }
+.saas-app .service-progress i { background: #bd9757; }
+.saas-app .popular-price, .saas-app .team-online { color: #d9b977; }
+.saas-app .team-online { background: #282116; }
+.saas-app .presence { background: #c6a15f; }
+.saas-app .presence.busy { background: #c67c5c; }
+.saas-app .ai-insight-card { border-color: #5a4728; background: linear-gradient(135deg, #251e12, #17150f); }
+.saas-app .insight-topline, .saas-app .ai-insight-card > button { color: #dfbd7e; }
+.saas-app .demo-tag { background: #382d1a; color: #d7b573; }
+.saas-app .ai-insight-card h3 { color: #f0e8d8; }
+.saas-app .ai-insight-card p { color: #b3aa99; }
+.saas-app .ai-insight-card p strong { color: #e0c17e; }
+.saas-app .assistant-panel { border-color: #57452b; background: #11110f; }
+.saas-app .assistant-header, .saas-app .assistant-composer { border-color: #332f28; background: #171613; }
+.saas-app .assistant-header strong, .saas-app .assistant-composer input { color: #eee8dc; }
+.saas-app .assistant-mark, .saas-app .assistant-context { border-color: #53432a; background: #211b11; color: #d6b671; }
+.saas-app .chat-message.assistant { border-color: #38342c; background: #1a1916; color: #e0d9cc; }
+.saas-app .chat-message.user { background: #3a2d18; color: #f0d699; }
+.saas-app .assistant-prompts button { border-color: #52432b; background: #1a1711; color: #dfbd7e; }
+.saas-app .assistant-composer input::placeholder, .saas-app .assistant-footnote { color: #898276; }
+.saas-app .assistant-composer button { background: #c29b5d; color: #19140d; }
+.saas-app .booking-modal { border-color: #4b412e; background: #151412; }
+.saas-app .booking-modal input, .saas-app .booking-modal select { border-color: #403a2e; background: #0e0e0d; color: #e8e1d5; }
+.saas-app .toast-message { border-color: #675334; background: #181611; color: #e0bd7e; }

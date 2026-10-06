@@ -1,0 +1,39 @@
+{
+  "name": "barberia-saas-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:migrate": "prisma db push",
+    "db:generate": "prisma generate",
+    "db:generate:postgres": "prisma generate --schema prisma/schema.postgres.prisma",
+    "db:push:postgres": "prisma db push --schema prisma/schema.postgres.prisma",
+    "db:bootstrap": "node scripts/bootstrap-admin.js",
+    "build:vercel": "npm run db:generate:postgres && next build",
+    "db:seed": "prisma db seed",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.5",
+    "jose": "^6.2.12",
+    "lucide-react": "latest",
+    "next": "latest",
+    "openai": "^7.28.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "resend": "^6.32.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  },
+  "overrides": {
+    "@prisma/config": {
+      "deepmerge-ts": "^8.0.2"
+    }
+  }
+}
