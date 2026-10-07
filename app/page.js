@@ -260,12 +260,28 @@ export default function Home() {
           ))}
         </nav>
 
+        <div className="nav-caption">ACESSO PÚBLICO</div>
+        <nav className="sidebar-nav" aria-label="Navegação pública">
+          <a href="/cliente/novo-agendamento" className="sidebar-link" title="Agendar horário online como cliente">
+            <Sparkles size={18} strokeWidth={1.8} /><span>Agendar Online</span>
+          </a>
+          <a href="/cliente/login" className="sidebar-link" title="Área restrita do cliente">
+            <UsersRound size={18} strokeWidth={1.8} /><span>Área do Cliente</span>
+          </a>
+          <a href="/barbeiro/login" className="sidebar-link" title="Painel de atendimento do barbeiro">
+            <Scissors size={18} strokeWidth={1.8} /><span>Portal Barbeiro</span>
+          </a>
+          <a href="/admin/gestao" className="sidebar-link" title="Painel administrativo da barbearia">
+            <Settings2 size={18} strokeWidth={1.8} /><span>Gestão Master</span>
+          </a>
+        </nav>
+
         <div className="sidebar-spacer" />
         <div className="sidebar-ai-card">
           <div className="ai-card-icon"><Sparkles size={18} /></div>
-          <strong>Seu copiloto está pronto</strong>
-          <p>Insights simples com os dados da sua barbearia.</p>
-          <button onClick={() => setAssistantOpen(true)}>Conversar com a IA <ChevronRight size={14} /></button>
+          <strong>Copiloto IA v2.5</strong>
+          <p>Insights em tempo real com inteligência preditiva.</p>
+          <button onClick={() => setAssistantOpen(true)}>Consultar IA Neural <ChevronRight size={14} /></button>
         </div>
         <button className="sidebar-link settings-link" title="Abrir configurações e gestão" onClick={() => { window.location.href = '/admin/gestao'; }}><Settings2 size={18} /><span>Configurações</span></button>
         <div className="profile-mini"><div className="profile-avatar">RM</div><div><strong>Rafael Mendes</strong><small>Administrador</small></div><Ellipsis size={19} /></div>
@@ -274,17 +290,39 @@ export default function Home() {
       <section className="main-area">
         <header className="topbar saas-topbar">
           <button className="mobile-menu-toggle" aria-label="Abrir navegação" onClick={() => setMobileMenuOpen((open) => !open)}><Menu size={20} /></button>
-          <div className="breadcrumb"><span>Navalha Studio</span><ChevronRight size={14} /><strong>{navLabel}</strong></div>
+          <div className="breadcrumb"><span style={{ color: '#00f2fe' }}>Navalha SaaS v2.5</span><ChevronRight size={14} /><strong>{navLabel}</strong></div>
           <div className="topbar-tools">
-            <label className="global-search"><Search size={16} /><input aria-label="Buscar" placeholder="Buscar..." onChange={(event) => setSearch(event.target.value)} /><kbd><Command size={11} /> K</kbd></label>
+            <label className="global-search"><Search size={16} /><input aria-label="Buscar" placeholder="Buscar no sistema..." onChange={(event) => setSearch(event.target.value)} /><kbd><Command size={11} /> K</kbd></label>
             <button className="icon-button notification-button" aria-label="Notificações" onClick={() => showToast('Você está em dia com as notificações.')}><span className="notification-dot" /> <MessageCircle size={18} /></button>
             <button className="top-avatar" aria-label="Perfil de Rafael Mendes">RM</button>
           </div>
         </header>
 
         <div className="dashboard-content">
+          <div className="public-hub-banner">
+            <div className="hub-status-chip">
+              <span className="live-ping" />
+              <strong>SISTEMA PÚBLICO ATIVO</strong>
+              <span>· Experimente todas as áreas do SaaS em tempo real:</span>
+            </div>
+            <div className="hub-links">
+              <a href="/cliente/novo-agendamento" className="hub-link book">
+                <Sparkles size={14} /> <span>Agendar Online (Público)</span>
+              </a>
+              <a href="/cliente/login" className="hub-link client">
+                <UsersRound size={14} /> <span>Área do Cliente</span>
+              </a>
+              <a href="/barbeiro/login" className="hub-link barber">
+                <Scissors size={14} /> <span>Portal Barbeiro</span>
+              </a>
+              <a href="/admin/gestao" className="hub-link admin">
+                <Settings2 size={14} /> <span>Painel Gestão</span>
+              </a>
+            </div>
+          </div>
+
           <div className="page-heading">
-            <div><div className="date-eyebrow"><span className="live-dot" /> DADOS DE DEMONSTRAÇÃO <span>·</span> {new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: '2-digit', month: 'long' }).format(new Date()).toUpperCase()}</div><h1>{activeView === 'overview' ? 'Bom dia, Rafael' : navLabel}<span>{activeView === 'overview' ? '.' : ''}</span></h1><p>{activeView === 'overview' ? 'Aqui está o resumo da sua barbearia hoje.' : `Acompanhe e gerencie ${navLabel.toLowerCase()} do seu negócio.`}</p></div>
+            <div><div className="date-eyebrow"><span className="live-dot" /> SISTEMA TECH ONLINE <span>·</span> {new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: '2-digit', month: 'long' }).format(new Date()).toUpperCase()} <span>·</span> <span style={{ color: '#00f2fe' }}>DEMO PÚBLICA</span></div><h1>{activeView === 'overview' ? 'Bom dia, Rafael' : navLabel}<span>{activeView === 'overview' ? '.' : ''}</span></h1><p>{activeView === 'overview' ? 'Monitoramento inteligente e indicadores em tempo real da barbearia.' : `Acompanhe e gerencie ${navLabel.toLowerCase()} do seu negócio.`}</p></div>
             <button className="primary-button" onClick={() => setShowBooking(true)}><Plus size={17} /> Novo agendamento</button>
           </div>
 

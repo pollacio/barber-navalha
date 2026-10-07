@@ -2,8 +2,8 @@ import './globals.css';
 import './auth.css';
 
 export const metadata = {
-  title: 'Navalha Studio | Gestão para Barbearias',
-  description: 'Painel de gestão de barbearia com agenda, equipe, clientes e assistente de IA.'
+  title: 'Navalha Tech Barber | SaaS Next-Gen & Agendamento Inteligente',
+  description: 'Plataforma inteligente para barbearias de alta performance com IA neural, agendamento online público e controle operacional em tempo real.'
 };
 
 export default function RootLayout({ children }) {

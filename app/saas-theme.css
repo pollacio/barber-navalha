@@ -1,91 +1,895 @@
-.saas-app {
-  --ink: #f0ebe1;
-  --muted: #a39c90;
-  --line: #302d27;
-  --surface: #131311;
-  --canvas: #0b0b0a;
-  --green: #c29b5d;
-  --lime: #dfbd7e;
-  color-scheme: dark;
-  background: var(--canvas);
-  color: var(--ink);
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --tech-cyan: #00f2fe;
+  --tech-cyan-glow: rgba(0, 242, 254, 0.45);
+  --tech-blue: #38bdf8;
+  --tech-indigo: #6366f1;
+  --tech-violet: #8b5cf6;
+  --tech-emerald: #10b981;
+  --tech-amber: #f59e0b;
+  --tech-rose: #f43f5e;
 }
-.saas-app .sidebar { border-right: 1px solid #27241e; background: #0e0e0d; }
-.saas-app .brand-symbol { background: #c69e5e; color: #17130c; }
-.saas-app .workspace-switcher { border-color: #38332a; background: #171613; }
-.saas-app .shop-avatar { background: #2d2518; color: #e1bd7b; }
-.saas-app .nav-caption, .saas-app .workspace-copy small, .saas-app .profile-mini small { color: #91897a; }
-.saas-app .sidebar-link { color: #bcb4a6; }
-.saas-app .sidebar-link:hover { background: #211d15; color: #f3ead7; }
-.saas-app .sidebar-link.active { background: #2c2416; color: #e2c17e; }
-.saas-app .nav-count { background: #3a3020; color: #dfc788; }
-.saas-app .sidebar-ai-card { border-color: #51432c; background: #19160f; }
-.saas-app .ai-card-icon { background: #2d2518; color: #dfbd7e; }
-.saas-app .sidebar-ai-card p { color: #aaa294; }
-.saas-app .sidebar-ai-card > button { color: #dfbd7e; }
-.saas-app .profile-mini { border-color: #302d27; }
-.saas-app .profile-avatar, .saas-app .top-avatar { background: #302719; color: #e0bd7b; }
-.saas-app .saas-topbar { border-bottom-color: #302d27; background: #10100f; color: #eee8dd; }
-.saas-app .breadcrumb, .saas-app .breadcrumb strong { color: #c3bbad; }
-.saas-app .breadcrumb svg { color: #736c5f; }
-.saas-app .global-search, .saas-app .icon-button { border-color: #39362f; background: #151513; color: #c5bcac; }
-.saas-app .global-search input { color: #ece6db; }
-.saas-app .global-search input::placeholder { color: #807a70; }
-.saas-app .global-search kbd { border-color: #39362f; color: #a69e91; }
-.saas-app .notification-dot { border-color: #151513; background: #d6aa65; }
-.saas-app .dashboard-content { color: #eee8dd; }
-.saas-app .date-eyebrow, .saas-app .page-heading p { color: #a59d90; }
-.saas-app .live-dot, .saas-app .open-status > span, .saas-app .team-online > span { background: #c7a362; }
-.saas-app .page-heading h1, .saas-app .panel-heading h2 { color: #f0ebe1; }
-.saas-app .page-heading h1 span, .saas-app .section-kicker { color: #c6a15f; }
-.saas-app .primary-button { border-color: #d2ad6a; background: linear-gradient(180deg, #dfbd7e, #bb9150); color: #19140d !important; }
-.saas-app .primary-button:hover { background: #e6c987; }
-.saas-app .metric-card, .saas-app .panel { border-color: #302d27; background: #131311; }
-.saas-app .metric-top, .saas-app .metric-note { color: #a7a094; }
-.saas-app .metric-value, .saas-app .revenue-total > strong { color: #f0ebe1; }
-.saas-app .metric-icon.green, .saas-app .metric-icon.blue, .saas-app .metric-icon.orange, .saas-app .metric-icon.violet { background: #272014; color: #ddba76; }
-.saas-app .metric-change.up, .saas-app .metric-change.down { color: #d0ad69; }
-.saas-app .subtle-button, .saas-app .select-button { border-color: #39362f; background: #171715; color: #d2c7b4; }
-.saas-app .subtle-button:hover, .saas-app .select-button:hover { border-color: #80683e; color: #e5c37f; }
-.saas-app .agenda-summary, .saas-app .appointment-row, .saas-app .popular-service, .saas-app .team-status { border-color: #302d27; }
-.saas-app .today-date strong, .saas-app .appointment-detail > strong, .saas-app .popular-service-name strong, .saas-app .team-person strong { color: #e9e3d8; }
-.saas-app .calendar-icon, .saas-app .person-avatar.mint, .saas-app .service-number.mint { background: #292216; color: #e0bd7b; }
-.saas-app .person-avatar.peach, .saas-app .service-number.peach { background: #2d2119; color: #d5a17a; }
-.saas-app .person-avatar.lavender, .saas-app .service-number.lavender { background: #29251d; color: #d0bb8e; }
-.saas-app .person-avatar.yellow, .saas-app .service-number.yellow { background: #302817; color: #dec27c; }
-.saas-app .appointment-detail > span, .saas-app .team-person small { color: #a39b8e; }
-.saas-app .appointment-status { background: #2b2417; color: #dfbd7e; }
-.saas-app .appointment-status.em-atendimento { background: #22231f; color: #d5bd87; }
-.saas-app .appointment-status.concluído { background: #242519; color: #c9c37f; }
-.saas-app .appointment-status.aguardando { background: #30271a; color: #d3ac6b; }
-.saas-app .row-action:hover { background: #2b2417; color: #e3c581; }
-.saas-app .add-appointment-row { border-color: #39362f; color: #d4b16b; }
-.saas-app .revenue-total > span { color: #dfbd7e; }
-.saas-app .chart-guides i { border-color: #302d27; }
-.saas-app .chart-bars span { background: #705933; }
-.saas-app .chart-bars span.bar-highlight { background: #d2ab65; }
-.saas-app .chart-labels, .saas-app .service-progress { color: #918a7d; }
-.saas-app .service-progress { background: #302d27; }
-.saas-app .service-progress i { background: #bd9757; }
-.saas-app .popular-price, .saas-app .team-online { color: #d9b977; }
-.saas-app .team-online { background: #282116; }
-.saas-app .presence { background: #c6a15f; }
-.saas-app .presence.busy { background: #c67c5c; }
-.saas-app .ai-insight-card { border-color: #5a4728; background: linear-gradient(135deg, #251e12, #17150f); }
-.saas-app .insight-topline, .saas-app .ai-insight-card > button { color: #dfbd7e; }
-.saas-app .demo-tag { background: #382d1a; color: #d7b573; }
-.saas-app .ai-insight-card h3 { color: #f0e8d8; }
-.saas-app .ai-insight-card p { color: #b3aa99; }
-.saas-app .ai-insight-card p strong { color: #e0c17e; }
-.saas-app .assistant-panel { border-color: #57452b; background: #11110f; }
-.saas-app .assistant-header, .saas-app .assistant-composer { border-color: #332f28; background: #171613; }
-.saas-app .assistant-header strong, .saas-app .assistant-composer input { color: #eee8dc; }
-.saas-app .assistant-mark, .saas-app .assistant-context { border-color: #53432a; background: #211b11; color: #d6b671; }
-.saas-app .chat-message.assistant { border-color: #38342c; background: #1a1916; color: #e0d9cc; }
-.saas-app .chat-message.user { background: #3a2d18; color: #f0d699; }
-.saas-app .assistant-prompts button { border-color: #52432b; background: #1a1711; color: #dfbd7e; }
-.saas-app .assistant-composer input::placeholder, .saas-app .assistant-footnote { color: #898276; }
-.saas-app .assistant-composer button { background: #c29b5d; color: #19140d; }
-.saas-app .booking-modal { border-color: #4b412e; background: #151412; }
-.saas-app .booking-modal input, .saas-app .booking-modal select { border-color: #403a2e; background: #0e0e0d; color: #e8e1d5; }
-.saas-app .toast-message { border-color: #675334; background: #181611; color: #e0bd7e; }
+
+.saas-app {
+  --ink: #f8fafc;
+  --muted: #94a3b8;
+  --line: rgba(56, 189, 248, 0.12);
+  --surface: rgba(15, 23, 42, 0.7);
+  --canvas: #05070e;
+  --green: #10b981;
+  --lime: #00f2fe;
+  color-scheme: dark;
+  background: 
+    radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, #070a14 0%, #04060a 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Scrollbar futurista */
+.saas-app ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.saas-app ::-webkit-scrollbar-track {
+  background: rgba(10, 14, 26, 0.5);
+}
+.saas-app ::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 999px;
+}
+.saas-app ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.5);
+}
+
+/* Sidebar High-Tech */
+.saas-app .sidebar {
+  border-right: 1px solid rgba(56, 189, 248, 0.12);
+  background: rgba(8, 12, 22, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 30;
+}
+.saas-app .sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.4), rgba(99, 102, 241, 0.2) 50%, transparent);
+  pointer-events: none;
+}
+.saas-app .workspace-brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.saas-app .brand-symbol {
+  background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%);
+  color: #020617;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.45);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.saas-app .brand-symbol:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 0 28px rgba(0, 242, 254, 0.7);
+}
+.saas-app .workspace-brand strong {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 19px;
+  background: linear-gradient(135deg, #ffffff 60%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.saas-app .workspace-brand small {
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 2px;
+}
+.saas-app .workspace-switcher {
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.saas-app .workspace-switcher:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.15);
+}
+.saas-app .shop-avatar {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.3));
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+.saas-app .nav-caption,
+.saas-app .workspace-copy small,
+.saas-app .profile-mini small {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1px;
+}
+.saas-app .sidebar-link {
+  color: #94a3b8;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.saas-app .sidebar-link:hover {
+  background: rgba(56, 189, 248, 0.08);
+  color: #f8fafc;
+  transform: translateX(3px);
+}
+.saas-app .sidebar-link.active {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.18) 0%, rgba(99, 102, 241, 0.08) 100%);
+  color: #00f2fe;
+  font-weight: 600;
+  border-left: 3px solid #00f2fe;
+  box-shadow: inset 0 0 15px rgba(0, 242, 254, 0.06);
+}
+.saas-app .nav-count {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Card IA na Sidebar */
+.saas-app .sidebar-ai-card {
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+.saas-app .sidebar-ai-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #00f2fe);
+}
+.saas-app .ai-card-icon {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  border-radius: 8px;
+}
+.saas-app .sidebar-ai-card strong {
+  color: #f1f5f9;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+}
+.saas-app .sidebar-ai-card p {
+  color: #94a3b8;
+  font-size: 10px;
+}
+.saas-app .sidebar-ai-card > button {
+  color: #c084fc;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.3);
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+.saas-app .sidebar-ai-card > button:hover {
+  color: #e9d5ff;
+  gap: 7px;
+}
+.saas-app .profile-mini {
+  border-color: rgba(56, 189, 248, 0.12);
+}
+.saas-app .profile-avatar,
+.saas-app .top-avatar {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.3));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+/* Topbar Futurista */
+.saas-app .saas-topbar {
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+  background: rgba(8, 12, 22, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #f8fafc;
+}
+.saas-app .breadcrumb {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+.saas-app .breadcrumb strong {
+  color: #00f2fe;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
+}
+.saas-app .breadcrumb svg {
+  color: #475569;
+}
+.saas-app .global-search {
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+.saas-app .global-search:focus-within {
+  border-color: #00f2fe;
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+}
+.saas-app .global-search input {
+  color: #f8fafc;
+}
+.saas-app .global-search input::placeholder {
+  color: #64748b;
+}
+.saas-app .global-search kbd {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+}
+.saas-app .icon-button {
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  background: rgba(15, 23, 42, 0.6);
+  color: #cbd5e1;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.saas-app .icon-button:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  color: #00f2fe;
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.2);
+}
+.saas-app .notification-dot {
+  background: #00f2fe;
+  border-color: #080c16;
+  box-shadow: 0 0 8px #00f2fe, 0 0 14px #00f2fe;
+  animation: cyberPing 1.8s infinite;
+}
+
+@keyframes cyberPing {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Headings e Títulos */
+.saas-app .dashboard-content {
+  color: #f8fafc;
+}
+.saas-app .date-eyebrow {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1.5px;
+  font-size: 9.5px;
+}
+.saas-app .live-dot,
+.saas-app .open-status > span,
+.saas-app .team-online > span {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+.saas-app .page-heading h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #f8fafc;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.saas-app .page-heading h1 span {
+  color: #00f2fe;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+.saas-app .page-heading p {
+  color: #94a3b8;
+}
+.saas-app .section-kicker {
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1.5px;
+}
+.saas-app .panel-heading h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #f8fafc;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Botões Primários Futuristas */
+.saas-app .primary-button {
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.saas-app .primary-button:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Cards de Métricas Estilo HUD */
+.saas-app .metric-card {
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(13, 18, 32, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.saas-app .metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), transparent);
+}
+.saas-app .metric-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.15);
+}
+.saas-app .metric-top,
+.saas-app .metric-note {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+}
+.saas-app .metric-value {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+.saas-app .metric-icon.green {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.2);
+}
+.saas-app .metric-icon.blue {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.2);
+}
+.saas-app .metric-icon.orange {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.2);
+}
+.saas-app .metric-icon.violet {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a855f7;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.2);
+}
+.saas-app .metric-change.up {
+  color: #10b981;
+}
+.saas-app .metric-change.down {
+  color: #f43f5e;
+}
+
+/* Painéis de Conteúdo */
+.saas-app .panel {
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(13, 18, 32, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+.saas-app .subtle-button,
+.saas-app .select-button {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  color: #94a3b8;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  transition: all 0.2s ease;
+}
+.saas-app .subtle-button:hover,
+.saas-app .select-button:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  color: #00f2fe;
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.15);
+}
+
+/* Agenda e Linhas de Agendamento */
+.saas-app .agenda-summary,
+.saas-app .appointment-row,
+.saas-app .popular-service,
+.saas-app .team-status {
+  border-color: rgba(56, 189, 248, 0.1);
+}
+.saas-app .today-date strong,
+.saas-app .appointment-detail > strong,
+.saas-app .popular-service-name strong,
+.saas-app .team-person strong {
+  color: #f8fafc;
+}
+.saas-app .appointment-detail > span,
+.saas-app .team-person small {
+  color: #94a3b8;
+}
+.saas-app .appointment-row {
+  transition: background 0.18s ease, transform 0.18s ease;
+  border-radius: 8px;
+  padding: 8px;
+}
+.saas-app .appointment-row:hover {
+  background: rgba(56, 189, 248, 0.05);
+  transform: translateX(2px);
+}
+.saas-app .calendar-icon {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Avatares Modernos */
+.saas-app .person-avatar.mint,
+.saas-app .service-number.mint {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+.saas-app .person-avatar.peach,
+.saas-app .service-number.peach {
+  background: rgba(244, 63, 94, 0.18);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fb7185;
+}
+.saas-app .person-avatar.lavender,
+.saas-app .service-number.lavender {
+  background: rgba(139, 92, 246, 0.18);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: #c084fc;
+}
+.saas-app .person-avatar.yellow,
+.saas-app .service-number.yellow {
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+/* Status Futuristas */
+.saas-app .appointment-status {
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+}
+.saas-app .appointment-status.em-atendimento {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+.saas-app .appointment-status.concluído {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}
+.saas-app .appointment-status.aguardando {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+.saas-app .appointment-status.confirmado {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+.saas-app .row-action:hover {
+  background: rgba(56, 189, 248, 0.15);
+  color: #00f2fe;
+}
+.saas-app .add-appointment-row {
+  border: 1px dashed rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.04);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.saas-app .add-appointment-row:hover {
+  border-color: #00f2fe;
+  color: #00f2fe;
+  background: rgba(56, 189, 248, 0.08);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.15);
+}
+
+/* Gráfico de Receita Tech */
+.saas-app .revenue-total > strong {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.saas-app .revenue-total > span {
+  color: #10b981;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+.saas-app .chart-guides i {
+  border-color: rgba(56, 189, 248, 0.08);
+}
+.saas-app .chart-bars span {
+  background: rgba(56, 189, 248, 0.2);
+  border-radius: 3px 3px 0 0;
+  transition: background 0.2s ease;
+}
+.saas-app .chart-bars span:hover {
+  background: rgba(56, 189, 248, 0.4);
+}
+.saas-app .chart-bars span.bar-highlight {
+  background: linear-gradient(180deg, #00f2fe 0%, #3b82f6 100%);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+}
+.saas-app .chart-labels,
+.saas-app .service-progress {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+}
+.saas-app .service-progress {
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.saas-app .service-progress i {
+  background: linear-gradient(90deg, #38bdf8, #00f2fe);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+  border-radius: 999px;
+}
+.saas-app .popular-price {
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+.saas-app .team-online {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  font-family: 'JetBrains Mono', monospace;
+}
+.saas-app .presence {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+.saas-app .presence.busy {
+  background: #f43f5e;
+  box-shadow: 0 0 8px #f43f5e;
+}
+
+/* Card Holográfico de IA */
+.saas-app .ai-insight-card {
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.08) 50%, rgba(15, 23, 42, 0.9) 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.saas-app .ai-insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #00f2fe, #3b82f6);
+}
+.saas-app .insight-topline {
+  color: #c084fc;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.saas-app .demo-tag {
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: #e9d5ff;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 4px;
+}
+.saas-app .ai-insight-card h3 {
+  color: #f8fafc;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.saas-app .ai-insight-card p {
+  color: #94a3b8;
+}
+.saas-app .ai-insight-card p strong {
+  color: #00f2fe;
+}
+.saas-app .ai-insight-card > button {
+  background: linear-gradient(135deg, #8b5cf6, #38bdf8);
+  color: #ffffff;
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  transition: all 0.2s ease;
+}
+.saas-app .ai-insight-card > button:hover {
+  box-shadow: 0 0 26px rgba(139, 92, 246, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Painel do Copiloto IA (Terminal) */
+.saas-app .assistant-panel {
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 14px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.15);
+}
+.saas-app .assistant-header {
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(15, 23, 42, 0.8);
+}
+.saas-app .assistant-header strong {
+  color: #f8fafc;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.saas-app .assistant-mark {
+  background: linear-gradient(135deg, #8b5cf6, #00f2fe);
+  color: #020617;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+.saas-app .assistant-context {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(56, 189, 248, 0.05);
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  border-radius: 8px;
+}
+.saas-app .chat-message.assistant {
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  color: #e2e8f0;
+  border-radius: 10px;
+}
+.saas-app .chat-message.user {
+  background: linear-gradient(135deg, #0284c7, #4f46e5);
+  color: #ffffff;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.25);
+  border-radius: 10px;
+}
+.saas-app .assistant-prompts button {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  color: #38bdf8;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  transition: all 0.2s ease;
+}
+.saas-app .assistant-prompts button:hover {
+  border-color: #00f2fe;
+  color: #00f2fe;
+  background: rgba(56, 189, 248, 0.12);
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.2);
+}
+.saas-app .assistant-composer {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 10px;
+}
+.saas-app .assistant-composer input {
+  color: #f8fafc;
+}
+.saas-app .assistant-composer input::placeholder {
+  color: #64748b;
+}
+.saas-app .assistant-composer button {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.35);
+}
+.saas-app .assistant-footnote {
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Modal de Agendamento */
+.saas-app .booking-modal {
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 14px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.15);
+}
+.saas-app .booking-modal input,
+.saas-app .booking-modal select {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  border-radius: 8px;
+}
+.saas-app .booking-modal input:focus,
+.saas-app .booking-modal select:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.25);
+}
+.saas-app .toast-message {
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(16px);
+  color: #34d399;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+/* Novo Banner de Hub Público no SaaS */
+.public-hub-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 50%, rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(56, 189, 248, 0.05);
+}
+.hub-status-chip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #f8fafc;
+  font-size: 11px;
+}
+.hub-status-chip strong {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+  color: #00f2fe;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+.hub-status-chip span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+.live-ping {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00f2fe;
+  box-shadow: 0 0 10px #00f2fe;
+}
+.live-ping::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #00f2fe;
+  animation: pingRing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes pingRing {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.hub-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+.hub-link.client {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+}
+.hub-link.client:hover {
+  background: rgba(56, 189, 248, 0.25);
+  color: #00f2fe;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.3);
+  transform: translateY(-1px);
+}
+.hub-link.book {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(14, 165, 233, 0.35);
+}
+.hub-link.book:hover {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+  transform: translateY(-1px);
+}
+.hub-link.barber {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+.hub-link.barber:hover {
+  background: rgba(245, 158, 11, 0.22);
+  color: #fde68a;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
+  transform: translateY(-1px);
+}
+.hub-link.admin {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #c084fc;
+}
+.hub-link.admin:hover {
+  background: rgba(139, 92, 246, 0.22);
+  color: #e9d5ff;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .public-hub-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hub-links {
+    width: 100%;
+  }
+}
