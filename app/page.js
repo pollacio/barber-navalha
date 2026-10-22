@@ -239,11 +239,19 @@ export default function Home() {
 
   return (
     <main className="saas-app">
+      {mobileMenuOpen && (
+        <div className="sidebar-backdrop" onClick={() => setMobileMenuOpen(false)} />
+      )}
       <aside className={`sidebar ${mobileMenuOpen ? 'sidebar-open' : ''}`}>
-        <a className="workspace-brand" href="#inicio" onClick={(event) => event.preventDefault()}>
-          <span className="brand-symbol"><Scissors size={20} strokeWidth={2.2} /></span>
-          <span><strong>navalha</strong><small>STUDIO & BARBER</small></span>
-        </a>
+        <div className="sidebar-mobile-header">
+          <a className="workspace-brand" href="#inicio" onClick={(event) => event.preventDefault()}>
+            <span className="brand-symbol"><Scissors size={20} strokeWidth={2.2} /></span>
+            <span><strong>navalha</strong><small>STUDIO & BARBER</small></span>
+          </a>
+          <button className="sidebar-close-btn" aria-label="Fechar navegação" onClick={() => setMobileMenuOpen(false)}>
+            <X size={18} />
+          </button>
+        </div>
 
         <div className="workspace-switcher">
           <span className="shop-avatar">N</span>
