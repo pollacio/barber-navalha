@@ -119,9 +119,17 @@ async function saveConversation(session, conversation, messages) {
 
 export async function POST(request) {
   const session = await requireSession(['CUSTOMER']);
-  if (!session) return NextResponse.json({ error: 'Acesse sua conta para conversar com a assistente.' }, { status: 401 });
   const parsed = requestSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: 'Escreva uma pergunta curta para continuar.' }, { status: 400 });
+
+  if (!session) {
+    const tenant = await prisma.tenant.findUnique({ where: { slug: 'navalha-studio' }, select: { id: true, name: true, timezone: true } });
+    if (!tenant) return NextResponse.json({ reply: 'Bem-vindo à Navalha Studio! Faça login para agendar.', conversationId: '' });
+    const services = await prisma.service.findMany({ where: { tenantId: tenant.id, active: true }, select: { name: true, priceCents: true, durationMinutes: true }, orderBy: { name: 'asc' } });
+    const barbers = await prisma.barber.findMany({ where: { tenantId: tenant.id, active: true }, select: { name: true }, orderBy: { name: 'asc' } });
+    const reply = `Olá! Na Navalha Studio temos: ${services.map((s) => `${s.name} (${money(s.priceCents)}, ${s.durationMinutes} min)`).join('; ')}. Barbeiros: ${barbers.map((b) => b.name).join(', ')}. Para confirmar sua vaga exclusiva, acesse sua conta ou use o agendamento público!`;
+    return NextResponse.json({ reply, conversationId: '' });
+  }
 
   const conversation = parsed.data.conversationId
     ? await prisma.aIConversation.findFirst({ where: { id: parsed.data.conversationId, tenantId: session.tenantId, userId: session.userId } })

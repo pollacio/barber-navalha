@@ -45,8 +45,8 @@ button { font: inherit; color: inherit; }
 .nav a:hover { color: var(--gold); }
 .top-actions { display: flex; align-items: center; gap: 14px; }
 .btn {
-  border-radius: 8px;
-  padding: 12px 20px;
+  border-radius: 9999px;
+  padding: 12px 24px;
   border: 1px solid transparent;
   display: inline-flex;
   justify-content: center;
@@ -111,8 +111,8 @@ button { font: inherit; color: inherit; }
   background: rgba(13, 18, 32, 0.8);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(56, 189, 248, 0.18);
-  border-radius: 14px;
-  padding: 30px;
+  border-radius: 28px;
+  padding: 34px;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.08);
 }
 .booking-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
@@ -145,7 +145,7 @@ button { font: inherit; color: inherit; }
 .step strong, .step small { display: block; font-family: 'Space Grotesk', sans-serif; }
 .step strong { font-size: 13px; font-weight: 600; }
 .step small { font-size: 11px; margin-top: 4px; color: #94a3b8; }
-.booking-grid { display: grid; grid-template-columns: 1.1fr 1.05fr 1.05fr 0.95fr; background: rgba(10, 14, 26, 0.7); border-radius: 10px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.12); }
+.booking-grid { display: grid; grid-template-columns: 1.1fr 1.05fr 1.05fr 0.95fr; background: rgba(10, 14, 26, 0.7); border-radius: 22px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.12); }
 .booking-column, .summary-column { padding: 25px; border-right: 1px solid rgba(56, 189, 248, 0.12); }
 .summary-column { border-right: 0; background: rgba(15, 23, 42, 0.85); }
 .column-title { display: flex; align-items: center; gap: 10px; color: #00f2fe; margin-bottom: 19px; }
@@ -154,8 +154,8 @@ button { font: inherit; color: inherit; }
 .choice-card {
   border: 1px solid rgba(56, 189, 248, 0.18);
   background: rgba(15, 23, 42, 0.6);
-  padding: 13px 12px;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border-radius: 16px;
   text-align: left;
   display: flex;
   align-items: center;
@@ -178,8 +178,8 @@ button { font: inherit; color: inherit; }
   backdrop-filter: blur(14px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-radius: 12px;
-  padding: 22px;
+  border-radius: 26px;
+  padding: 24px;
 }
 .benefit { display: flex; gap: 15px; padding: 8px 22px; border-right: 1px solid rgba(56, 189, 248, 0.12); }
 .benefit:last-child { border-right: 0; }
@@ -190,13 +190,13 @@ button { font: inherit; color: inherit; }
 .content-section { padding: 90px 4vw 10px; }
 .section-title span, .contact-section > div > span { font-size: 11px; letter-spacing: 2px; color: #00f2fe; font-family: 'JetBrains Mono', monospace; }
 .section-title h2, .contact-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; max-width: 750px; margin: 13px 0 33px; letter-spacing: -0.03em; }
-.service-showcase, .barbers-showcase { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.service-showcase, .barbers-showcase { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .service-tile, .profile-card {
   border: 1px solid rgba(56, 189, 248, 0.15);
   background: rgba(13, 18, 32, 0.75);
   backdrop-filter: blur(14px);
-  border-radius: 12px;
-  padding: 27px;
+  border-radius: 24px;
+  padding: 28px;
   min-height: 180px;
   transition: all 0.25s ease;
 }
@@ -210,7 +210,7 @@ button { font: inherit; color: inherit; }
 .service-tile p, .service-tile strong, .profile-card p { font-size: 12px; color: #94a3b8; }
 .service-tile strong { color: #10b981; font-size: 14px; font-family: 'JetBrains Mono', monospace; font-weight: 700; }
 .profile-card { min-height: 220px; }
-.profile-avatar { width: 78px; height: 78px; font-size: 19px; background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.3)); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; }
+.profile-avatar { width: 78px; height: 78px; font-size: 19px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.3)); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8; }
 .profile-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; margin: 20px 0 5px; }
 .profile-card p { display: flex; align-items: center; gap: 4px; color: #38bdf8; font-family: 'JetBrains Mono', monospace; }
 

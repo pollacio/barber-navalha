@@ -36,14 +36,14 @@
   text-decoration: none;
 }
 .customer-logo > span {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
-  border-radius: 9px;
+  border-radius: 16px;
   background: linear-gradient(135deg, #00f2fe, #3b82f6);
   color: #020617;
-  box-shadow: 0 0 16px rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
 }
 .customer-logo strong {
   font-family: 'Space Grotesk', sans-serif;
@@ -70,8 +70,8 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
-  padding: 6px 12px;
-  border-radius: 7px;
+  padding: 8px 16px;
+  border-radius: 9999px;
 }
 .customer-header nav a:hover {
   color: #00f2fe;
@@ -139,8 +139,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0 18px;
-  border-radius: 8px;
+  padding: 0 20px;
+  border-radius: 9999px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -174,12 +174,12 @@
 }
 
 .customer-panel {
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  border-radius: 12px;
-  background: rgba(13, 18, 32, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 26px;
+  background: rgba(13, 18, 32, 0.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 .customer-panel-heading {
@@ -255,11 +255,11 @@
 .customer-next-card {
   position: relative;
   overflow: hidden;
-  padding: 24px;
+  padding: 26px;
   border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(15, 23, 42, 0.8) 100%);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.1);
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.14) 0%, rgba(15, 23, 42, 0.85) 100%);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.45), 0 0 35px rgba(56, 189, 248, 0.12);
 }
 .customer-next-card::after {
   position: absolute;
@@ -356,13 +356,13 @@
   border: 0;
 }
 .history-date-badge {
-  width: 40px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   align-content: center;
   justify-items: center;
   border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 8px;
+  border-radius: 16px;
   background: rgba(56, 189, 248, 0.1);
   color: #38bdf8;
   font-family: 'JetBrains Mono', monospace;
@@ -400,9 +400,9 @@
   border-bottom: 1px solid rgba(56, 189, 248, 0.12);
 }
 .customer-tabs button {
-  padding: 7px 14px;
+  padding: 8px 16px;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 9999px;
   background: none;
   color: #94a3b8;
   font-family: 'Space Grotesk', sans-serif;
@@ -426,9 +426,9 @@
   grid-template-columns: 65px minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
-  padding: 16px;
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  border-radius: 10px;
+  padding: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 22px;
   background: rgba(15, 23, 42, 0.7);
   transition: all 0.2s ease;
 }
@@ -483,9 +483,9 @@
 }
 .customer-booking-actions button,
 .customer-booking-actions a {
-  padding: 7px 12px;
+  padding: 8px 16px;
   border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 6px;
+  border-radius: 9999px;
   background: rgba(15, 23, 42, 0.8);
   color: #38bdf8;
   font-family: 'Space Grotesk', sans-serif;
@@ -606,9 +606,9 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
-  padding: 16px;
+  padding: 18px;
   border: 1px solid rgba(56, 189, 248, 0.18);
-  border-radius: 10px;
+  border-radius: 22px;
   background: rgba(15, 23, 42, 0.6);
   text-align: left;
   cursor: pointer;
@@ -665,7 +665,7 @@
   overflow: hidden;
   padding: 0;
   border: 1px solid rgba(56, 189, 248, 0.18);
-  border-radius: 10px;
+  border-radius: 22px;
   background: rgba(15, 23, 42, 0.6);
   text-align: left;
   cursor: pointer;
@@ -718,9 +718,9 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid rgba(56, 189, 248, 0.18);
-  border-radius: 10px;
+  border-radius: 22px;
   background: rgba(15, 23, 42, 0.6);
   text-align: left;
   cursor: pointer;
@@ -767,12 +767,12 @@
   font-size: 14px;
 }
 .calendar-controls button {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 50%;
   background: rgba(15, 23, 42, 0.8);
   color: #cbd5e1;
   cursor: pointer;
@@ -799,8 +799,8 @@
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(56, 189, 248, 0.12);
-  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 50%;
   background: rgba(15, 23, 42, 0.6);
   color: #e2e8f0;
   font-family: 'JetBrains Mono', monospace;
@@ -816,7 +816,7 @@
 }
 .calendar-day.available:hover {
   border-color: #00f2fe;
-  background: rgba(56, 189, 248, 0.15);
+  background: rgba(56, 189, 248, 0.2);
   color: #00f2fe;
 }
 .calendar-day.selected {
@@ -834,10 +834,10 @@
   margin-top: 18px;
 }
 .time-choice {
-  min-height: 40px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.7);
+  min-height: 42px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.75);
   color: #f8fafc;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
@@ -846,7 +846,7 @@
 }
 .time-choice:hover {
   border-color: #00f2fe;
-  background: rgba(56, 189, 248, 0.15);
+  background: rgba(56, 189, 248, 0.18);
   color: #00f2fe;
 }
 .time-choice.selected {
@@ -854,7 +854,7 @@
   background: linear-gradient(135deg, #00f2fe, #3b82f6);
   color: #020617;
   font-weight: 700;
-  box-shadow: 0 0 16px rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.5);
 }
 
 .wizard-footer {
@@ -864,10 +864,10 @@
   margin-top: 16px;
 }
 .wizard-footer button {
-  min-height: 40px;
-  padding: 0 16px;
+  min-height: 42px;
+  padding: 0 20px;
   border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 8px;
+  border-radius: 9999px;
   background: rgba(15, 23, 42, 0.8);
   color: #e2e8f0;
   font-family: 'Space Grotesk', sans-serif;
@@ -933,16 +933,16 @@
 .booking-success {
   max-width: 660px;
   margin: 40px auto;
-  padding: 36px 30px;
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  border-radius: 16px;
-  background: linear-gradient(140deg, rgba(16, 185, 129, 0.12) 0%, rgba(13, 18, 32, 0.9) 100%);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.2);
+  padding: 40px 32px;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  border-radius: 30px;
+  background: linear-gradient(140deg, rgba(16, 185, 129, 0.14) 0%, rgba(13, 18, 32, 0.92) 100%);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65), 0 0 45px rgba(16, 185, 129, 0.22);
   text-align: center;
 }
 .success-check {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   display: grid;
   place-items: center;
   margin: 0 auto 18px;
@@ -965,10 +965,10 @@
 }
 .success-code {
   display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  border-radius: 8px;
-  background: rgba(56, 189, 248, 0.12);
+  padding: 8px 18px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 9999px;
+  background: rgba(56, 189, 248, 0.15);
   color: #00f2fe;
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -980,10 +980,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin: 22px 0;
-  padding: 18px;
-  border: 1px solid rgba(56, 189, 248, 0.18);
-  border-radius: 10px;
-  background: rgba(15, 23, 42, 0.6);
+  padding: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.65);
   text-align: left;
 }
 .success-details span {

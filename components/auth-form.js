@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowRight, Scissors, Sparkles, User, Briefcase, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Scissors, Sparkles, User, Briefcase, ShieldCheck, Zap } from 'lucide-react';
 
 const roleDetails = {
   ADMIN: { name: 'Administrador', description: 'Acesse o painel de gestão da barbearia.', email: 'admin@navalha.test', href: '/admin/login' },
@@ -13,11 +13,19 @@ const roleDetails = {
 
 export default function AuthForm({ role = 'CUSTOMER', mode = 'login' }) {
   const router = useRouter();
+  const [notice, setNotice] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const details = roleDetails[role];
   const [email, setEmail] = useState(mode === 'login' ? details.email : '');
   const [password, setPassword] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setNotice(params.get('notice') || '');
+    }
+  }, []);
 
   const isRegister = mode === 'register';
   const title = isRegister ? 'Crie sua conta' : mode === 'forgot' ? 'Recuperar senha' : `Bem-vindo, ${details.name}`;
@@ -26,6 +34,30 @@ export default function AuthForm({ role = 'CUSTOMER', mode = 'login' }) {
     setEmail(details.email);
     setPassword('Navalha123!');
     setError('');
+  };
+
+  const handleInstantDemo = async () => {
+    setLoading(true);
+    setError('');
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: details.email,
+          password: 'Navalha123!',
+          tenantSlug: 'navalha-studio',
+          expectedRole: role,
+        }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'Não foi possível entrar no modo demonstração.');
+      router.push(notice === 'booking' && role === 'CUSTOMER' ? '/cliente/novo-agendamento' : result.redirectTo);
+      router.refresh();
+    } catch (demoError) {
+      setError(demoError.message);
+      setLoading(false);
+    }
   };
 
   const submit = async (event) => {
@@ -71,6 +103,13 @@ export default function AuthForm({ role = 'CUSTOMER', mode = 'login' }) {
           <h1>{title}</h1>
           <p className="auth-intro">{isRegister ? 'Cadastre-se para marcar horários e acompanhar seus atendimentos.' : details.description}</p>
 
+          {notice === 'booking' && (
+            <div className="auth-notice-banner">
+              <Sparkles size={16} />
+              <span>Para concluir seu agendamento, entre com sua conta ou use o <strong>acesso instantâneo de teste</strong> abaixo!</span>
+            </div>
+          )}
+
           {mode === 'login' && (
             <div className="auth-role-tabs">
               <Link href="/cliente/login" className={`auth-role-tab ${role === 'CUSTOMER' ? 'active' : ''}`}>Cliente</Link>
@@ -93,8 +132,11 @@ export default function AuthForm({ role = 'CUSTOMER', mode = 'login' }) {
           {mode === 'login' && (
             <div className="auth-demo">
               <div><strong>Demonstração Pública:</strong> <code>{details.email}</code></div>
+              <button type="button" className="auth-instant-btn" onClick={handleInstantDemo} disabled={loading}>
+                <Zap size={15} /> Acessar instantaneamente como {details.name} (1 Clique)
+              </button>
               <button type="button" className="auth-quick-fill-btn" onClick={handleQuickFill}>
-                ⚡ Preencher credenciais de teste automaticamente
+                Preencher credenciais de teste nos campos
               </button>
             </div>
           )}

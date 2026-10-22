@@ -8,8 +8,12 @@ export default function CustomerLayout({ children }) {
   return (
     <div className="customer-app">
       <header className="customer-header">
-        <Link className="customer-logo" href="/cliente/login"><span><Scissors size={19} /></span><strong>NAVALHA</strong></Link>
-        <nav><Link href="/cliente/novo-agendamento"><CalendarDays size={15} /> Agendar</Link><Link href="/cliente/minha-conta">Minha conta</Link></nav>
+        <Link className="customer-logo" href="/"><span><Scissors size={19} /></span><strong>NAVALHA</strong></Link>
+        <nav>
+          <Link href="/"><Scissors size={14} /> Visão SaaS</Link>
+          <Link href="/cliente/novo-agendamento"><CalendarDays size={14} /> Agendar</Link>
+          <Link href="/cliente/minha-conta">Minha conta</Link>
+        </nav>
       </header>
       {children}
       <CustomerAI />

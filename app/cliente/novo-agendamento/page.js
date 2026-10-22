@@ -5,7 +5,7 @@ import { prisma } from '@/lib/prisma';
 
 export default async function NewBookingPage({ searchParams }) {
   const session = await getSession();
-  if (!session || session.role !== 'CUSTOMER') redirect('/cliente/login');
+  if (!session || session.role !== 'CUSTOMER') redirect('/cliente/login?notice=booking');
 
   const params = await searchParams;
   const [tenant, services, styles, barbers, initialAppointment] = await Promise.all([
